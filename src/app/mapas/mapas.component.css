@@ -1,0 +1,72 @@
+.carousel-container {
+    position: relative; /* Establece la posición relativa para alinear los botones */
+    width: auto; /* Ajusta el contenedor al ancho de la pantalla */
+    height: 900px; /* Altura fija para el contenedor del carrusel */
+    overflow: hidden; /* Evita que las imágenes se desborden del contenedor */
+}
+
+.carousel-image {
+    max-width: none; /* No limita el ancho máximo de la imagen */
+    max-height: none; /* No limita la altura máxima de la imagen */
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+    display: block; /* Evita el espacio adicional debajo de la imagen */
+    margin: auto; /* Centra la imagen horizontalmente */
+    object-fit: cover; /* Escala la imagen para cubrir el contenedor manteniendo su relación de aspecto */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%; /* Centra verticalmente el botón */
+    color: white; /* Color del texto */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.carousel-button:first-child {
+    left: 30px; /* Ajusta la posición del botón izquierdo */
+    transform: translateY(-50%); /* Centra el botón verticalmente */
+}
+
+.carousel-button:last-child {
+    right: 30px; /* Ajusta la posición del botón derecho */
+    transform: translateY(-50%); /* Centra el botón verticalmente */
+}
+
+.carousel-button:hover {
+    border-radius: 20%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente al pasar sobre el botón */
+}
+
+.carousel-button::before {
+    content: '←'; /* Contenido del pseudo-elemento antes del botón (flecha izquierda) */
+    font-size: 24px; /* Tamaño de la flecha */
+}
+
+.carousel-button:last-child::before {
+    content: '→'; /* Contenido del pseudo-elemento antes del botón (flecha derecha) */
+}
+
+.overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Alinea el texto e imagen al centro */
+}
+
+.carousel-text {
+    font-family: valorant;
+    color: white;
+    font-size: 34px;
+    margin-bottom: 15px; /* Espacio entre el texto y la imagen */
+}
+
+.overlay-image {
+    width: auto; /* Tamaño de la imagen superpuesta */
+    height: 400px; /* Tamaño de la imagen superpuesta */
+    border-radius: 50%; /* Borde circular para la imagen */
+}

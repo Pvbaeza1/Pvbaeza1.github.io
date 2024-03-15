@@ -1,0 +1,74 @@
+.contenedor_tarjetas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples líneas */
+    padding: 20px; /* Espacio interior del contenedor */
+    justify-content: space-around; /* Distribuye uniformemente las tarjetas horizontalmente */
+}
+
+.titulo_principal{
+    text-align: center;
+    font-family: valorant;
+    color: white;
+    font-size: 40px;
+    margin: 3px;
+}
+
+.titulo_armas{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+.contenedor_2{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_3{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_4{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_arma{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.weapon_cards {
+    cursor: pointer;
+    position: relative; /* Establece el posicionamiento relativo */
+    width: 350px;
+    height: 100px;
+    background-color: var(--black-pearl-900);
+    margin: 15px;
+    border: 1px solid;
+    display: flex; /* Utiliza flexbox para centrar verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    border-color: gray;
+    border-radius: 3px;
+    transition: transform 0.3s; /* Agrega una transición suave al cambio de tamaño */
+}
+
+.weapon_cards:hover {
+    transform: scale(1.1); /* Hace que el elemento se agrande al 110% del tamaño original */
+}
+
+.weapon_info {
+    position: absolute; /* Establece el posicionamiento absoluto */
+    top: 60px; /* Ajusta el margen superior según sea necesario */
+    left: 15px; /* Ajusta el margen izquierdo según sea necesario */
+    color: white; /* Color del texto */
+}
+
+img {
+    max-width: 60%; /* Establece el ancho máximo de las imágenes al 100% del contenedor */
+    max-height: 60%; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+}

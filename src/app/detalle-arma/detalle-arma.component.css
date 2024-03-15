@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.default-skin {
+    margin-bottom: 20px; /* Espacio entre la skin default y las miniaturas */
+}
+
+.skin-thumbnails {
+    display: flex;
+    overflow-x: auto; /* Permite desplazamiento horizontal si hay muchas miniaturas */
+    scroll-snap-type: x mandatory; /* Hace que las miniaturas se "peguen" al hacer scroll */
+}
+
+.thumbnail {
+    flex: 0 0 auto; /* Las miniaturas no cambian de tamaño */
+    margin-right: 10px; /* Espacio entre miniaturas */
+    scroll-snap-align: start; /* Al hacer scroll, cada miniatura comienza en el inicio del contenedor */
+}
+
+.thumbnail img {
+    width: 100px; /* Tamaño de las miniaturas */
+    height: auto;
+}

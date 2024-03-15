@@ -1,0 +1,13 @@
+<div class="container" *ngIf="arma">
+    <div class="default-skin">
+        <!-- Muestra la skin default -->
+        <img [src]="arma.data.displayIcon" alt="Skin Default">
+    </div>
+
+    <div class="skin-thumbnails">
+        <!-- Carrusel de miniaturas de skins -->
+        <div class="thumbnail" *ngFor="let skin of arma.data.skins">
+            <img [src]="skin.displayIcon" alt="{{ skin.displayName }}">
+        </div>
+    </div>
+</div>

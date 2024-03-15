@@ -1,0 +1,18 @@
+<div *ngIf="images.length > 0" class="carousel-container">
+    <!-- Botones de navegación -->
+    <button (click)="prevImage()" class="carousel-button"></button>
+
+    <!-- Imagen de fondo del carrusel -->
+    <img [src]="currentImage" alt="Carousel Image" class="carousel-image">
+
+    <!-- Contenedor para el texto e imagen superpuestos -->
+    <div class="overlay-container">
+        <!-- Texto superpuesto -->
+        <h2 class="carousel-text">{{data[currentImageIndex]?.displayName}}</h2>
+        <!-- Imagen superpuesta -->
+        <img [src]="data[currentImageIndex]?.displayIcon" alt="Logo" class="overlay-image" [ngClass]="{ 'visible': currentImageIndex === index }">
+    </div>
+
+    <!-- Botón de navegación -->
+    <button (click)="nextImage()" class="carousel-button"></button>
+</div>

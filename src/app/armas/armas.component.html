@@ -1,0 +1,137 @@
+<div>
+    <h1 class="titulo_principal">ARMAMENTO</h1>
+<div class="contenedor_tarjetas">
+    <div class="contenedor_arma">
+        <h1 class="titulo_armas">ARMAS DE MANO</h1>
+        <div *ngFor="let weapon of data">
+            <ng-container *ngIf="weapon.category === 'EEquippableCategory::Sidearm'">
+                <a [routerLink]="['/arma', weapon.uuid]">
+                    <div class="weapon_cards">
+                    <div class="weapon_info">
+                        <p>{{weapon.displayName}}</p>
+                    </div>
+                    <img [src]="weapon.displayIcon" alt="">
+                </div>
+            </a>
+                <!-- Aquí puedes mostrar otros detalles de las armas de mano -->
+            </ng-container>
+        </div>
+    </div>
+    
+    <div class="contenedor_2">
+        <h1 class="titulo_armas">SUBAMETRALLADORAS</h1>
+
+        <div class="contenedor_arma">
+            <div *ngFor="let weapon of data">
+                <ng-container *ngIf="weapon.category === 'EEquippableCategory::SMG'">
+                <a [routerLink]="['/arma', weapon.uuid]">
+
+                    <div class="weapon_cards">
+                        <div class="weapon_info">
+                            <p>{{weapon.displayName}}</p>
+                        </div>
+                        <img [src]="weapon.displayIcon" alt="">
+                    </div>
+                </a>
+                    <!-- Aquí puedes mostrar otros detalles de las armas de mano -->
+                </ng-container>
+            </div>
+        </div>
+        <h1 class="titulo_armas">ESCOPETAS</h1>
+        <div class="contenedor_arma">
+            <div *ngFor="let weapon of data">
+                <ng-container *ngIf="weapon.category === 'EEquippableCategory::Shotgun'">
+                <a [routerLink]="['/arma', weapon.uuid]">
+
+                    <div class="weapon_cards">
+                        <div class="weapon_info">
+                            <p>{{weapon.displayName}}</p>
+                        </div>
+                        <img [src]="weapon.displayIcon" alt="">
+                    </div>
+                </a>
+                    <!-- Aquí puedes mostrar otros detalles de las armas de mano -->
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor_3">
+        <h1 class="titulo_armas">RIFLES</h1>
+
+        <div class="contenedor_arma">
+            <div *ngFor="let weapon of data">
+                <ng-container *ngIf="weapon.category === 'EEquippableCategory::Rifle'">
+                <a [routerLink]="['/arma', weapon.uuid]">
+
+                    <div class="weapon_cards">
+                        <div class="weapon_info">
+                            <p>{{weapon.displayName}}</p>
+                        </div>
+                        <img [src]="weapon.displayIcon" alt="">
+                    </div>
+                </a>
+                    <!-- Aquí puedes mostrar otros detalles de las armas de mano -->
+                </ng-container>
+            </div>
+        </div>
+        <h1 class="titulo_armas">MELEE</h1>
+
+        <div class="contenedor_arma">
+            <div *ngFor="let weapon of data">
+                <ng-container *ngIf="weapon.category === 'EEquippableCategory::Melee'">
+                <a [routerLink]="['/arma', weapon.uuid]">
+
+                    <div class="weapon_cards">
+                        <div class="weapon_info">
+                            <p>{{weapon.displayName}}</p>
+                        </div>
+                        <img [src]="weapon.displayIcon" alt="">
+                    </div>
+                </a>
+                    <!-- Aquí puedes mostrar otros detalles de las armas de mano -->
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor_4">
+        <h1 class="titulo_armas">RIFLES DE FRANCOTIRADOR</h1>
+
+        <div class="contenedor_arma">
+            <div *ngFor="let weapon of data">
+                <ng-container *ngIf="weapon.category === 'EEquippableCategory::Sniper'">
+                <a [routerLink]="['/arma', weapon.uuid]">
+
+                    <div class="weapon_cards">
+                        <div class="weapon_info">
+                            <p>{{weapon.displayName}}</p>
+                        </div>
+                        <img [src]="weapon.displayIcon" alt="">
+                    </div>
+                </a>
+                    <!-- Aquí puedes mostrar otros detalles de las armas de mano -->
+                </ng-container>
+            </div>
+        </div>
+        <h1 class="titulo_armas">AMETRALLADORAS</h1>
+
+        <div class="contenedor_arma">
+            <div *ngFor="let weapon of data">
+                <ng-container *ngIf="weapon.category === 'EEquippableCategory::Heavy'">
+                <a [routerLink]="['/arma', weapon.uuid]">
+
+                    <div class="weapon_cards">
+                        <div class="weapon_info">
+                            <p>{{weapon.displayName}}</p>
+                        </div>
+                        <img [src]="weapon.displayIcon" alt="">
+                    </div>
+                </a>
+                    <!-- Aquí puedes mostrar otros detalles de las armas de mano -->
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

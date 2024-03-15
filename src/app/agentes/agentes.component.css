@@ -1,0 +1,56 @@
+/* En tu archivo CSS */
+html, body {
+    background-color: var(--black-pearl-700);
+}
+.contenedor_tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+}
+
+.agent_cards {
+    position: relative;
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    height: 300px; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Evita que la imagen superpuesta se desborde del contenedor */
+    background-color: var(--black-pearl-900);
+    margin: 20px;
+    border: 10px;
+}
+
+.agent_cards img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover; /* Escala la imagen para cubrir el contenedor manteniendo su relación de aspecto */
+}
+
+
+.background-image {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    width: 120%;
+    height: 120%;
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo */
+    opacity: 50%;
+    transform: translate(-50%, -50%); /* Centra completamente */
+    overflow: hidden; /* Evita que la imagen superpuesta se desborde del contenedor */
+}
+.overlay-image {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180%;
+    height: 180%;
+    overflow: hidden;
+    transition: top 0.3s ease, left 0.3s ease, width 0.3s ease, height 0.3s ease; /* Transición suave para los cambios */
+}
+
+.agent_cards:hover .overlay-image {
+    top: 65%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+}

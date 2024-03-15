@@ -1,0 +1,9 @@
+<div class="contenedor_tarjetas" >
+    <div *ngFor="let agent of data">
+        <div class="agent_cards">
+            <div class="background-image" [style.background-image]="'url(' + agent.background + ')'"></div>
+            <img [src]="agent.fullPortrait" alt="Full Portrait Image" class="overlay-image">
+        </div>
+        <!-- Aquí puedes mostrar otros detalles de los agentes -->
+    </div>
+</div>
